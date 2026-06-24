@@ -14,12 +14,12 @@
   // 控制 Shift 鍵與符號鍵的語言切換功能
   // '1': 預設模式
   // '2': 快捷切換模式（中文鍵盤 Shift 變「英」）
-  languageSwitchLayout: '2',
+  languageSwitchLayout: '1',
 
   // 英文鍵盤模式
   // '1': 純英文鍵盤（alphabetic_26，直接輸出字元，不走 Rime）
   // '2': 詞庫英文鍵盤（alphabetic_easy，走 easy_en 方案，支援候選補全）
-  englishKeyboardMode: '2',
+  englishKeyboardMode: '1',
 
   // 字母鍵長按選單排序
   // '2': 預設排序（大寫在首位）
@@ -31,7 +31,7 @@
   // '1': 空白鍵最小（逗號句號較大）
   // '2': 空白鍵適中
   // '3': 空白鍵最大
-  spaceKeyLayout: '3',
+  spaceKeyLayout: '2',
   
   // 慣用手設定
   // 控制 z 鍵上滑及長按選項中的單手模式切換方向
@@ -64,7 +64,7 @@
   // 
   // 完全自訂10個按鈕位置（包含面板和收折）
   // 預設配置：[面板] [空 空 中英 簡繁 常用語 剪貼 符號 emoji] [收折]
-  toolbarButtons: [1, 3, 4, 27, 5, 6, 29, 30, 8, 2],
+  toolbarButtons: [1, 0, 0, 3, 4, 5, 6, 7, 8, 2],
   
   // ===== 滑動與長按功能設定 =====
   
@@ -239,10 +239,24 @@
   local light_panelRightBg      = '#FFFFFF',
   local light_panelLeftText     = light_textMain,
   local light_panelRightText    = light_textMain,
+  local light_panelLeftShadow       = light_shadow,
+  local light_panelLeftBorder       = light_border,
+  local light_panelLeftBorderSize   = light_borderSize,
+  local light_panelRightShadow      = light_shadow,
+  local light_panelRightBorder      = light_border,
+  local light_panelRightBorderSize  = light_borderSize,
+  local light_panelCategoryHL       = light_keyNormalHL,
   local dark_panelLeftBg        = '#D1D1D624',
   local dark_panelRightBg       = '#D1D1D165',
   local dark_panelLeftText      = dark_textMain,
   local dark_panelRightText     = dark_textMain,
+  local dark_panelLeftShadow        = dark_shadow,
+  local dark_panelLeftBorder        = dark_border,
+  local dark_panelLeftBorderSize    = dark_borderSize,
+  local dark_panelRightShadow       = dark_shadow,
+  local dark_panelRightBorder       = dark_border,
+  local dark_panelRightBorderSize   = dark_borderSize,
+  local dark_panelCategoryHL        = dark_keyNormalHL,
   local size_panelSmall              = 18,
   local size_panelLarge_symbol       = 26,
   local size_panelLarge_emoji        = 30,
@@ -250,7 +264,13 @@
 
   // 數字鍵盤專屬 (九宮格/面板數字)
   local light_numericLeftBg     = '#979faf80',
+  local light_numericLeftShadow = light_shadow,
+  local light_numericLeftBorder = light_border,
+  local light_numericLeftBorderSize = light_borderSize,
   local dark_numericLeftBg      = '#D1D1D624',
+  local dark_numericLeftShadow  = dark_shadow,
+  local dark_numericLeftBorder  = dark_border,
+  local dark_numericLeftBorderSize = dark_borderSize,
   local size_number             = 24,
 
 
@@ -281,14 +301,24 @@
         panelRightBg: light_panelRightBg,
         panelLeftText: light_panelLeftText,
         panelRightText: light_panelRightText,
+        panelLeftShadow: light_panelLeftShadow,
+        panelLeftBorder: light_panelLeftBorder,
+        panelLeftBorderSize: light_panelLeftBorderSize,
+        panelRightShadow: light_panelRightShadow,
+        panelRightBorder: light_panelRightBorder,
+        panelRightBorderSize: light_panelRightBorderSize,
+        panelCategoryHighlight: light_panelCategoryHL,
         numericLeftPanelBg: light_numericLeftBg,
+        numericLeftPanelShadow: light_numericLeftShadow,
+        numericLeftPanelBorder: light_numericLeftBorder,
+        numericLeftPanelBorderSize: light_numericLeftBorderSize,
         textMain: light_textMain,
         textSub: light_textSub,
         textSystem: light_textSystem,
         textEnter: light_textEnter,
         textSpace: light_textSpace,
-        toolbarBg: light_toolbarBg,
         toolbarColor: light_toolbarColor,
+        toolbarBg: light_toolbarBg,
         candidateSelectedText: light_candidateSelectedText,
         candidateUnselectedText: light_candidateUnselectedText,
         candidateSelectedBg: light_candidateSelectedBg,
@@ -325,14 +355,24 @@
         panelRightBg: dark_panelRightBg,
         panelLeftText: dark_panelLeftText,
         panelRightText: dark_panelRightText,
+        panelLeftShadow: dark_panelLeftShadow,
+        panelLeftBorder: dark_panelLeftBorder,
+        panelLeftBorderSize: dark_panelLeftBorderSize,
+        panelRightShadow: dark_panelRightShadow,
+        panelRightBorder: dark_panelRightBorder,
+        panelRightBorderSize: dark_panelRightBorderSize,
+        panelCategoryHighlight: dark_panelCategoryHL,
         numericLeftPanelBg: dark_numericLeftBg,
+        numericLeftPanelShadow: dark_numericLeftShadow,
+        numericLeftPanelBorder: dark_numericLeftBorder,
+        numericLeftPanelBorderSize: dark_numericLeftBorderSize,
         textMain: dark_textMain,
         textSub: dark_textSub,
         textSystem: dark_textSystem,
         textEnter: dark_textEnter,
         textSpace: dark_textSpace,
-        toolbarBg: dark_toolbarBg,
         toolbarColor: dark_toolbarColor,
+        toolbarBg: dark_toolbarBg,
         candidateSelectedText: dark_candidateSelectedText,
         candidateUnselectedText: dark_candidateUnselectedText,
         candidateSelectedBg: dark_candidateSelectedBg,
