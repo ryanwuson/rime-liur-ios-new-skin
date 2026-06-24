@@ -1,4 +1,4 @@
-// Xiami 蝦米輸入法皮膚 - 慣用右手版本
+// 蝦米輸入法皮膚
 local settings = import 'Settings.libsonnet';
 
 // 定義所有鍵盤元件及其建構方式
