@@ -99,6 +99,17 @@ local groupSize(templateKey, defaultSize) =
   '数字键盘数字前景字体大小': getCascadedSize('numeric', 'numbers', 'numberSize', 'light', 24),  // 數字 0~9（九宮格專用）
   '数字键盘功能键字体大小': getCascadedSize('numeric', 'systemKeys', 'systemSize', 'light', 16),  // 系統功能鍵
 
+  // Enter 鍵字號（獨立於 systemSize，對應 groups.enterSize）
+  '26键enter键字体大小': getCascadedSize('keyboard26Chinese', 'enterKey', 'enterSize', 'light', 16),
+  '英文enter键字体大小': getCascadedSize('keyboard26Alphabetic', 'enterKey', 'enterSize', 'light', 16),
+  '注音enter键字体大小': getCascadedSize('bopomofo', 'enterKey', 'enterSize', 'light', 16),
+  '数字键盘enter键字体大小': getCascadedSize('numeric', 'enterKey', 'enterSize', 'light', 16),
+  'Row数字键盘enter键字体大小': getCascadedSize('numericRow', 'enterKey', 'enterSize', 'light', 16),
+  'Row符號键盘enter键字体大小': getCascadedSize('symbolicRow', 'enterKey', 'enterSize', 'light', 16),
+  '符號鍵盤enter键字体大小': getCascadedSize('symbolic', 'enterKey', 'enterSize', 'light', 16),
+  'emoji鍵盤enter键字体大小': getCascadedSize('emoji', 'enterKey', 'enterSize', 'light', 16),
+  'kaomojis鍵盤enter键字体大小': getCascadedSize('kaomojis', 'enterKey', 'enterSize', 'light', 16),
+
   // Row 鍵盤按鍵字號（繼承 alphabetSize，不用 numberSize）
   'Row数字键盘按键字体大小': getCascadedSize('numericRow', 'numbers', 'rowKeySize', 'light', 21),   // 數字/符號鍵
   'Row符號键盘按键字体大小': getCascadedSize('symbolicRow', 'symbols', 'rowKeySize', 'light', 21),  // 符號鍵
