@@ -1,4 +1,5 @@
-// 中文鍵盤的上滑、下滑數據
+// 中文鍵盤的上滑、下滑數據（swipeData 01 變體）
+// Z~M 下滑：鍵帽顯示 SF Symbol，下滑氣泡保留中文 hintLabel
 local zKeyHandedness = import 'zKeyHandedness.libsonnet';
 
 {
@@ -55,13 +56,13 @@ local zKeyHandedness = import 'zKeyHandedness.libsonnet';
     j: { action: { symbol: '?' }, label: { text: '?' } },
     k: { action: { character: ':' }, label: { text: ':' } },
     l: { action: { character: '"' }, label: { text: '"' } },
-    z: { action: { shortcut: '#行首' }, label: { text: 'home' }, hintLabel: { text: '句首' }, hintFontSize: 16, center: { x: 0.5, y: 0.8 } },
-    x: { action: { shortcut: '#cut' }, label: { text: 'cut' }, hintLabel: { text: '剪下' }, hintFontSize: 16, center: { x: 0.5, y: 0.8 } },
-    c: { action: { shortcut: '#copy' }, label: { text: 'copy' }, hintLabel: { text: '複製' }, hintFontSize: 16, center: { x: 0.5, y: 0.8 } },
-    v: { action: { shortcut: '#paste' }, label: { text: 'paste' }, hintLabel: { text: '貼上' }, hintFontSize: 16, center: { x: 0.5, y: 0.8 } },
-    b: { action: 'tab', label: { text: 'tab' }, hintLabel: { text: 'Tab' }, hintFontSize: 16, center: { x: 0.5, y: 0.8 } },
-    n: { action: { shortcut: '#selectText' }, label: { text: 'select' }, hintLabel: { text: '全選' }, hintFontSize: 16, center: { x: 0.5, y: 0.8 } },
-    m: { action: { shortcut: '#行尾' }, label: { text: 'end' }, hintLabel: { text: '句尾' }, hintFontSize: 16, center: { x: 0.5, y: 0.8 } },
+    z: { action: { shortcut: '#行首' }, label: { systemImageName: 'arrow.left.to.line.compact' }, hintLabel: { text: '句首' }, hintFontSize: 16, center: { x: 0.65, y: 0.8 } },
+    x: { action: { shortcut: '#cut' }, label: { systemImageName: 'scissors' }, hintLabel: { text: '剪下' }, hintFontSize: 16, center: { x: 0.65, y: 0.8 } },
+    c: { action: { shortcut: '#copy' }, label: { systemImageName: 'document.on.document' }, hintLabel: { text: '複製' }, hintFontSize: 16, center: { x: 0.65, y: 0.8 } },
+    v: { action: { shortcut: '#paste' }, label: { systemImageName: 'document.on.clipboard' }, hintLabel: { text: '貼上' }, hintFontSize: 16, center: { x: 0.65, y: 0.8 } },
+    b: { action: 'tab', label: { systemImageName: 'increase.indent' }, hintLabel: { text: 'Tab' }, hintFontSize: 16, center: { x: 0.65, y: 0.8 } },
+    n: { action: { shortcut: '#selectText' }, label: { systemImageName: 'text.viewfinder' }, hintLabel: { text: '全選' }, hintFontSize: 16, center: { x: 0.65, y: 0.8 } },
+    m: { action: { shortcut: '#行尾' }, label: { systemImageName: 'arrow.right.to.line.compact' }, hintLabel: { text: '句尾' }, hintFontSize: 16, center: { x: 0.65, y: 0.8 } },
   },
 
   // 数字键盘划动
