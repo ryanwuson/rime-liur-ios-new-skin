@@ -242,9 +242,10 @@ local keyboard(theme, kbTypePrefix='符號') = {
 
   // 符號數據 - 引用 collectionData
   '常用': collectionData.symbolicDataSource['常用'],
-  '一般': collectionData.symbolicDataSource['一般'],
-  '括號': collectionData.symbolicDataSource['括號'],
-  '引號': collectionData.symbolicDataSource['引號'],
+  '半標': collectionData.symbolicDataSource['半標'],
+  '全標': collectionData.symbolicDataSource['全標'],
+  '半括': collectionData.symbolicDataSource['半括'],
+  '全括': collectionData.symbolicDataSource['全括'],
   '豎標': collectionData.symbolicDataSource['豎標'],
   '數學': collectionData.symbolicDataSource['數學'],
   '單位': collectionData.symbolicDataSource['單位'],
