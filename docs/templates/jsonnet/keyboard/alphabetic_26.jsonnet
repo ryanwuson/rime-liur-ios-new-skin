@@ -467,14 +467,14 @@ local keyboard(theme, orientation) =
       fontSize: fontSize['英文空白键文字大小'],  // 使用 Layer 3 可覆蓋的字號
     }),
 
-    // 蝦米句號鍵（模式 2：顯示「,」直出英文逗號，上滑出「.」）
+    // 蝦米句號鍵（模式 2：顯示「.」直出英文句號，上滑出「,」）
     periodButton: {
       size: ButtonSize['period键size'],
       backgroundStyle: 'alphabeticBackgroundStyle',
       foregroundStyle: if settings.languageSwitchLayout == '2' then ['periodButtonForegroundStyle', 'periodButtonSwipeUpIndicatorStyle'] else 'periodButtonForegroundStyle',
-      // 模式 2：直出英文逗號；模式 1：直出句號
-      action: if settings.languageSwitchLayout == '2' then { symbol: ',' } else { symbol: '.' },
-      [if settings.languageSwitchLayout == '2' then 'swipeUpAction']: { symbol: '.' },
+      // 模式 2：直出英文句號；模式 1：直出句號
+      action: if settings.languageSwitchLayout == '2' then { symbol: '.' } else { symbol: '.' },
+      [if settings.languageSwitchLayout == '2' then 'swipeUpAction']: { symbol: ',' },
       // 無論哪個模式，下滑都跳轉 Emoji 鍵盤
       [if swipeStyles.getEffectiveSetting('.', 'enableSwipeDownActions') then 'swipeDownAction']: { keyboardType: 'emoji' },
       hintStyle: 'periodButtonHintStyle',
@@ -482,15 +482,15 @@ local keyboard(theme, orientation) =
       animation: ['ButtonScaleAnimation'],
     },
     periodButtonForegroundStyle: utils.makeTextStyle({
-      // 模式 2：顯示「,」；模式 1：顯示「.」
-      text: if settings.languageSwitchLayout == '2' then ',' else '.',
+      // 模式 2：顯示「.」；模式 1：顯示「.」
+      text: if settings.languageSwitchLayout == '2' then '.' else '.',
       normalColor: color[theme]['英文字母键文字颜色'],
       highlightColor: color[theme]['英文字母键文字颜色'],
       fontSize: fontSize['按键前景文字大小'],
     }),
     periodButtonSwipeUpIndicatorStyle: {
       buttonStyleType: 'text',
-      text: '.',
+      text: ',',
       fontSize: fontSize['英文上划文字大小'],
       normalColor: color[theme]['英文上滑提示文字顏色'],
       center: { x: 0.5, y: 0.2 },
@@ -501,15 +501,15 @@ local keyboard(theme, orientation) =
       swipeUpForegroundStyle: 'periodButtonSwipeUpHintForegroundStyle',
     },
     periodButtonHintForegroundStyle: utils.makeTextStyle({
-      // 模式 2：氣泡顯示「,」；模式 1：顯示「.」
-      text: if settings.languageSwitchLayout == '2' then ',' else '.',
+      // 模式 2：氣泡顯示「.」；模式 1：顯示「.」
+      text: if settings.languageSwitchLayout == '2' then '.' else '.',
       normalColor: color[theme]['英文按下气泡文字颜色'],
       highlightColor: color[theme]['按下气泡文字顏色'],
       fontSize: fontSize['长按气泡文字大小'],
     }),
     periodButtonSwipeUpHintForegroundStyle: {
       buttonStyleType: 'text',
-      text: '.',
+      text: ',',
       fontSize: fontSize['划动气泡前景文字大小'],
       fontWeight: 'medium',
       normalColor: color[theme]['划动气泡文字顏色'],
