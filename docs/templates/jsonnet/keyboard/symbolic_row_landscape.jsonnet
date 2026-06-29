@@ -212,7 +212,7 @@ local keyboard(theme) =
       notification: ['returnKeyTypeChangedNotification'],
       swipeDownAction: { shortcut: '#换行' },
     },
-    enterSRowButtonForegroundStyle: utils.makeTextStyle({ text: '$returnKeyType', normalColor: color[theme]['Row符號鍵盤enter键文字颜色'], highlightColor: color[theme]['Row符號鍵盤enter键文字颜色'], fontSize: fontSize['Row符號键盘enter键字体大小'] }),
+    enterSRowButtonForegroundStyle: utils.makeTextStyle({ text: '$returnKeyType', normalColor: color[theme]['Row符號鍵盤enter键文字颜色'], highlightColor: color[theme]['Row符號鍵盤enter键文字颜色'], fontSize: fontSize['数字键盘功能键字体大小'] }),
 
     returnKeyTypeChangedNotification: {
       notificationType: 'returnKeyType',
@@ -220,7 +220,7 @@ local keyboard(theme) =
       backgroundStyle: 'enterButtonBackgroundStyle',
       foregroundStyle: 'returnKeyTypeForegroundStyle',
     },
-    returnKeyTypeForegroundStyle: utils.makeTextStyle({ text: '$returnKeyType', normalColor: color[theme]['Row符號鍵盤enter键文字颜色'], highlightColor: color[theme]['Row符號鍵盤enter键文字颜色'], fontSize: fontSize['Row符號键盘enter键字体大小'] }),
+    returnKeyTypeForegroundStyle: utils.makeTextStyle({ text: '$returnKeyType', normalColor: color[theme]['Row符號鍵盤enter键文字颜色'], highlightColor: color[theme]['Row符號鍵盤enter键文字颜色'], fontSize: fontSize['数字键盘功能键字体大小'] }),
 
     numberButtonBackgroundStyle: utils.makeGeometryStyle({
       insets: { top: 2, left: 2, bottom: 2, right: 2 },

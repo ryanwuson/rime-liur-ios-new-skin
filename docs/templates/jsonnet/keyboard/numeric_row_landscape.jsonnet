@@ -349,7 +349,7 @@ local keyboard(theme) =
       text: '$returnKeyType',
       normalColor: color[theme]['Row数字键盘enter键文字颜色'],
       highlightColor: color[theme]['Row数字键盘enter键文字颜色'],
-      fontSize: fontSize['Row数字键盘enter键字体大小'],
+      fontSize: fontSize['数字键盘功能键字体大小'],
     }),
 
     // returnKeyType notification
@@ -363,7 +363,7 @@ local keyboard(theme) =
       text: '$returnKeyType',
       normalColor: color[theme]['Row数字键盘enter键文字颜色'],
       highlightColor: color[theme]['Row数字键盘enter键文字颜色'],
-      fontSize: fontSize['Row数字键盘enter键字体大小'],
+      fontSize: fontSize['数字键盘功能键字体大小'],
     }),
 
     // ===== 背景樣式 =====

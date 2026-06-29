@@ -215,15 +215,15 @@ local keyboard(theme, orientation) =
     }),
     shiftButtonSwipeUpHintForegroundStyle: utils.makeTextStyle({
       text: '英',
-      normalColor: color[theme]['划动气泡文字顏色'],
-      highlightColor: color[theme]['划动气泡文字顏色'],
+      normalColor: color[theme]['系统功能键文字顏色'],
+      highlightColor: color[theme]['系统功能键文字顏色'],
       fontSize: fontSize['划动气泡前景文字大小'],
       center: { x: 0.5, y: 0.63 },
     }),
     shiftButtonSwipeDownHintForegroundStyle: utils.makeSystemImageStyle({
       systemImageName: 'globe',
-      normalColor: color[theme]['划动气泡文字顏色'],
-      highlightColor: color[theme]['划动气泡文字顏色'],
+      normalColor: color[theme]['系统功能键文字顏色'],
+      highlightColor: color[theme]['系统功能键文字顏色'],
       fontSize: fontSize['划动气泡前景文字大小'],
       center: { x: 0.5, y: 0.63 },
     }),
@@ -244,7 +244,7 @@ local keyboard(theme, orientation) =
       buttonStyleType: 'text',
       text: '英',
       fontSize: fontSize['上划文字大小'],
-      normalColor: color[theme]['上滑提示文字顏色'],
+      normalColor: color[theme]['系统功能键文字顏色'],
       center: { x: 0.5, y: 0.2 },
     },
     // 靜態指示器：下方「地球」
@@ -252,7 +252,7 @@ local keyboard(theme, orientation) =
       buttonStyleType: 'systemImage',
       systemImageName: 'globe',
       fontSize: fontSize['下划文字大小'],
-      normalColor: color[theme]['下滑提示文字顏色'],
+      normalColor: color[theme]['系统功能键文字顏色'],
       center: { x: 0.5, y: 0.8 },
     },
     // z 鍵：橫屏時移除上滑切換單手鍵盤功能和圖示

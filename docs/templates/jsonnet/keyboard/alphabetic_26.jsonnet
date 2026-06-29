@@ -141,7 +141,7 @@ local keyboard(theme, orientation) =
       buttonStyleType: 'text',
       text: '中',
       fontSize: fontSize['英文上划文字大小'],
-      normalColor: color[theme]['英文上滑提示文字顏色'],
+      normalColor: color[theme]['英文功能键文字颜色'],
       center: { x: 0.5, y: 0.2 },
     },
     // 靜態指示器：下方「地球」
@@ -149,7 +149,7 @@ local keyboard(theme, orientation) =
       buttonStyleType: 'systemImage',
       systemImageName: 'globe',
       fontSize: fontSize['英文下划文字大小'],
-      normalColor: color[theme]['英文下滑提示文字顏色'],
+      normalColor: color[theme]['英文功能键文字颜色'],
       center: { x: 0.5, y: 0.8 },
     },
     // 模式 1：預設 Shift 氣泡樣式（包含上滑顯示「中」）
@@ -174,8 +174,8 @@ local keyboard(theme, orientation) =
     }),
     shiftButtonSwipeDownHintForegroundStyle: utils.makeSystemImageStyle({
       systemImageName: 'globe',
-      normalColor: color[theme]['划动气泡文字顏色'],
-      highlightColor: color[theme]['划动气泡文字顏色'],
+      normalColor: color[theme]['英文功能键文字颜色'],
+      highlightColor: color[theme]['英文功能键文字颜色'],
       fontSize: fontSize['划动气泡前景文字大小'],
       center: { x: 0.5, y: 0.63 },
     }),
@@ -408,7 +408,7 @@ local keyboard(theme, orientation) =
       text: '中',
       fontSize: fontSize['划动气泡前景文字大小'],
       fontWeight: 'medium',
-      normalColor: color[theme]['划动气泡文字顏色'],
+      normalColor: color[theme]['英文功能键文字颜色'],
       center: { x: 0.5, y: 0.63 }, // 修正位置，與其他按鍵一致
     },
     // 上滑切換中文時的「中」字氣泡（位置參考 F 鍵，逗號鍵專用背景偏移不同）

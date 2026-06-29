@@ -145,7 +145,7 @@ local keyboard(theme, orientation) =
       buttonStyleType: 'text',
       text: '中',
       fontSize: fontSize['英文上划文字大小'],
-      normalColor: color[theme]['英文上滑提示文字顏色'],
+      normalColor: color[theme]['英文功能键文字颜色'],
       center: { x: 0.5, y: 0.2 },
     },
     // 靜態指示器：下方「地球」（模式 1 和 2 都有）
@@ -153,7 +153,7 @@ local keyboard(theme, orientation) =
       buttonStyleType: 'systemImage',
       systemImageName: 'globe',
       fontSize: fontSize['英文下划文字大小'],
-      normalColor: color[theme]['英文下滑提示文字顏色'],
+      normalColor: color[theme]['英文功能键文字颜色'],
       center: { x: 0.5, y: 0.8 },
     },
 
