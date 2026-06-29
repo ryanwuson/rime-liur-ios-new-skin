@@ -380,7 +380,7 @@ local keyboard(theme, orientation) =
     }),
     commaButtonHintStyle: {
       // 模式 2：用普通氣泡（無上滑區域）；模式 1：用逗號句號專用氣泡
-      backgroundStyle: if settings.languageSwitchLayout == '2' then 'alphabeticHintBackgroundStyle' else 'commaPeriodHintBackgroundStyle',
+      backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'commaButtonHintForegroundStyle',
       // 上滑氣泡：模式 2 無上滑，模式 1 顯示逗號
       swipeUpForegroundStyle: if settings.languageSwitchLayout == '2' then null else 'commaButtonSwipeUpHintForegroundStyle',
@@ -418,7 +418,7 @@ local keyboard(theme, orientation) =
       fontSize: fontSize['划动气泡前景文字大小'],
       fontWeight: 'medium',
       normalColor: color[theme]['划动气泡文字顏色'],
-      center: { x: 0.5, y: 0.45 }, // 使用 commaPeriodHintBackgroundStyle 的正確居中位置
+      center: { x: 0.5, y: 0.63 },
     },
     commaButtonSwipeUpHintForegroundStyle: {
       buttonStyleType: 'text',
@@ -430,9 +430,10 @@ local keyboard(theme, orientation) =
     },
     // 長按切換中文的氣泡樣式（比照中文鍵盤 Space 長按）
     commaButtonSwitchChineseStyle: {
-      backgroundStyle: 'commaPeriodHintSymbolsBackgroundStyle',
-      selectedBackgroundStyle: 'commaPeriodHintSymbolsSelectedStyle',
+      backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
+      selectedBackgroundStyle: 'alphabeticHintSymbolsSelectedStyle',
       selectedIndex: 0,
+      size: { width: 38, height: 25 },
       insets: { left: 8, right: 8, top: 3, bottom: 3 },
       symbolStyles: [
         'commaButtonSwitchChineseStyleOf0',
@@ -496,7 +497,7 @@ local keyboard(theme, orientation) =
       center: { x: 0.5, y: 0.2 },
     },
     periodButtonHintStyle: {
-      backgroundStyle: 'commaPeriodHintBackgroundStyle',
+      backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'periodButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'periodButtonSwipeUpHintForegroundStyle',
     },
@@ -513,7 +514,7 @@ local keyboard(theme, orientation) =
       fontSize: fontSize['划动气泡前景文字大小'],
       fontWeight: 'medium',
       normalColor: color[theme]['划动气泡文字顏色'],
-      center: { x: 0.5, y: 0.45 },
+      center: { x: 0.5, y: 0.63 },
     },
 
     // Enter 鍵
@@ -529,7 +530,7 @@ local keyboard(theme, orientation) =
       text: '$returnKeyType',
       normalColor: color[theme]['英文enter键文字颜色'],
       highlightColor: color[theme]['英文enter键文字颜色'],
-      fontSize: fontSize['英文enter键字体大小'],
+      fontSize: fontSize['英文按键前景sf符号大小'],  // 使用 systemSize
     }),
 
     // 背景樣式
@@ -588,27 +589,6 @@ local keyboard(theme, orientation) =
       normalImage: { file: 'hint', image: 'IMG3' },
       highlightImage: { file: 'hint', image: 'IMG3' },
     },
-    // 逗號和句號專用的點按氣泡背景（不帶 center 偏移，跟關閉內嵌一樣）
-    commaPeriodHintBackgroundStyle: {
-      buttonStyleType: 'fileImage',
-      contentMode: 'scaleAspectFit',
-      insets: { left: -10, right: -10, top: -10, bottom: -10 },
-      normalImage: { file: 'hint', image: 'IMG3' },
-      highlightImage: { file: 'hint', image: 'IMG3' },
-    },
-    // 逗號和句號專用的長按氣泡背景（不帶 insets 偏移，跟關閉內嵌一樣）
-    commaPeriodHintSymbolsBackgroundStyle: {
-      buttonStyleType: 'fileImage',
-      normalImage: { file: 'hint', image: 'IMG1' },
-      highlightImage: { file: 'hint', image: 'IMG1' },
-    },
-    // 逗號和句號專用的長按選中背景（跟關閉內嵌一樣的 insets）
-    commaPeriodHintSymbolsSelectedStyle: {
-      buttonStyleType: 'fileImage',
-      insets: { left: 4, right: 3, top: 8, bottom: 8 },
-      normalImage: { file: 'hint', image: 'IMG2' },
-      highlightImage: { file: 'hint', image: 'IMG2' },
-    },
     // d 鍵長按樣式（水平排列尺寸，但選中底色用較小的左邊距）
     dButtonHintSymbolsStyle: {
       insets: { top: 3, bottom: 3, left: 8, right: 8 },
@@ -634,8 +614,8 @@ local keyboard(theme, orientation) =
     // 逗號長按樣式（覆蓋自動生成的，使用專用背景）
     commaButtonHintSymbolsStyle: {
       insets: { top: 3, bottom: 3, left: 8, right: 8 },
-      backgroundStyle: 'commaPeriodHintSymbolsBackgroundStyle',
-      size: { width: 40, height: 53 },
+      backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
+      size: { width: 38, height: 25 },
       symbolStyles: [
         'commaButtonHintSymbolsStyleOf0',
         'commaButtonHintSymbolsStyleOf1',
@@ -643,14 +623,14 @@ local keyboard(theme, orientation) =
         'commaButtonHintSymbolsStyleOf3',
         'commaButtonHintSymbolsStyleOf4',
       ],
-      selectedBackgroundStyle: 'commaPeriodHintSymbolsSelectedStyle',
+      selectedBackgroundStyle: 'alphabeticHintSymbolsSelectedStyle',
       selectedIndex: std.get(hintSymbolsData, 'alphabetic', {}).comma.selectedIndex,
     },
     // 句號長按樣式（覆蓋自動生成的，使用專用背景）
     periodButtonHintSymbolsStyle: {
       insets: { top: 3, bottom: 3, left: 8, right: 8 },
-      backgroundStyle: 'commaPeriodHintSymbolsBackgroundStyle',
-      size: { width: 40, height: 53 },
+      backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
+      size: { width: 38, height: 25 },
       symbolStyles: [
         'periodButtonHintSymbolsStyleOf0',
         'periodButtonHintSymbolsStyleOf1',
@@ -658,17 +638,17 @@ local keyboard(theme, orientation) =
         'periodButtonHintSymbolsStyleOf3',
         'periodButtonHintSymbolsStyleOf4',
       ],
-      selectedBackgroundStyle: 'commaPeriodHintSymbolsSelectedStyle',
+      selectedBackgroundStyle: 'alphabeticHintSymbolsSelectedStyle',
       selectedIndex: std.get(hintSymbolsData, 'alphabetic', {}).period.selectedIndex,
     },
 
 
-    // 123 鍵長按樣式（使用專用背景，跟關閉內嵌一致）
+    // 123 鍵長按樣式
     numericButtonHintSymbolsStyle: {
-      backgroundStyle: 'commaPeriodHintSymbolsBackgroundStyle',
-      selectedBackgroundStyle: 'commaPeriodHintSymbolsSelectedStyle',
+      backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
+      selectedBackgroundStyle: 'alphabeticHintSymbolsSelectedStyle',
       selectedIndex: std.get(hintSymbolsData, 'alphabetic', {}).comma.selectedIndex,
-      size: { width: 30, height: 53 },
+      size: { width: 30, height: 25 },
       insets: { left: 8, right: 8, top: 3, bottom: 3 },
       symbolStyles: [
         'numericButtonHintSymbolsStyleOf0',
@@ -708,7 +688,7 @@ local keyboard(theme, orientation) =
       text: '$returnKeyType',
       normalColor: color[theme]['英文enter键文字颜色'],
       highlightColor: color[theme]['英文enter键文字颜色'],
-      fontSize: fontSize['英文enter键字体大小'],
+      fontSize: fontSize['英文按键前景sf符号大小'],  // 使用 systemSize
     }),
     preeditChangedForEnterButtonNotification: {
       notificationType: 'preeditChanged',
@@ -732,7 +712,7 @@ local keyboard(theme, orientation) =
       text: '確認',
       normalColor: color[theme]['英文enter键文字颜色'],
       highlightColor: color[theme]['英文enter键文字颜色'],
-      fontSize: fontSize['英文enter键字体大小'],
+      fontSize: fontSize['英文按键前景sf符号大小'],
     }),
     
     // 鍵盤背景樣式（支援 Layer 3 獨立背景色）

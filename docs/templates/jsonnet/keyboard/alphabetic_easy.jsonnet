@@ -271,22 +271,11 @@ local keyboard(theme, orientation) =
       center: { x: 0.5, y: 0.48 },
     },
 
-    commaPeriodHintSymbolsBackgroundStyle: {
-      buttonStyleType: 'fileImage',
-      normalImage: { file: 'hint', image: 'IMG1' },
-      highlightImage: { file: 'hint', image: 'IMG1' },
-    },
-    commaPeriodHintSymbolsSelectedStyle: {
-      buttonStyleType: 'fileImage',
-      insets: { left: 4, right: 3, top: 8, bottom: 8 },
-      normalImage: { file: 'hint', image: 'IMG2' },
-      highlightImage: { file: 'hint', image: 'IMG2' },
-    },
     numericButtonHintSymbolsStyle: {
-      backgroundStyle: 'commaPeriodHintSymbolsBackgroundStyle',
-      selectedBackgroundStyle: 'commaPeriodHintSymbolsSelectedStyle',
+      backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
+      selectedBackgroundStyle: 'alphabeticHintSymbolsSelectedStyle',
       selectedIndex: 0,
-      size: { width: 30, height: 53 },
+      size: { width: 30, height: 25 },
       insets: { left: 8, right: 8, top: 3, bottom: 3 },
       symbolStyles: [
         'numericButtonHintSymbolsStyleOf0',
@@ -374,7 +363,7 @@ local keyboard(theme, orientation) =
       center: { x: 0.5, y: 0.2 },
     },
     periodButtonHintStyle: {
-      backgroundStyle: 'commaPeriodHintBackgroundStyle',
+      backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'periodButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'periodButtonSwipeUpHintForegroundStyle',
     },
@@ -390,14 +379,7 @@ local keyboard(theme, orientation) =
       fontSize: fontSize['划动气泡前景文字大小'],
       fontWeight: 'medium',
       normalColor: color[theme]['划动气泡文字顏色'],
-      center: { x: 0.5, y: 0.45 },
-    },
-    commaPeriodHintBackgroundStyle: {
-      buttonStyleType: 'fileImage',
-      contentMode: 'scaleAspectFit',
-      insets: { left: -10, right: -10, top: -10, bottom: -10 },
-      normalImage: { file: 'hint', image: 'IMG3' },
-      highlightImage: { file: 'hint', image: 'IMG3' },
+      center: { x: 0.5, y: 0.63 },
     },
 
     // Enter 鍵
@@ -414,7 +396,7 @@ local keyboard(theme, orientation) =
       text: '$returnKeyType',
       normalColor: color[theme]['英文enter键文字颜色'],
       highlightColor: color[theme]['英文enter键文字颜色'],
-      fontSize: fontSize['英文enter键字体大小'],
+      fontSize: fontSize['英文按键前景sf符号大小'],
     }),
 
     // 背景樣式
@@ -518,7 +500,7 @@ local keyboard(theme, orientation) =
       text: '$returnKeyType',
       normalColor: color[theme]['英文enter键文字颜色'],
       highlightColor: color[theme]['英文enter键文字颜色'],
-      fontSize: fontSize['英文enter键字体大小'],
+      fontSize: fontSize['英文按键前景sf符号大小'],
     }),
     preeditChangedForEnterButtonNotification: {
       notificationType: 'preeditChanged',
