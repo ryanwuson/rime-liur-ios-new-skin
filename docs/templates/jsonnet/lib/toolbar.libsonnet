@@ -47,6 +47,7 @@ local buttonMap = {
   '29': 'toolbarNumericPanelButton', // 九宮格數字鍵盤（固定）
   '30': 'toolbarSymbolPanelButton',  // 符號面板（固定）
   '31': 'toolbarTestButton',         // 【測試用】easy_en 獨立英文鍵盤
+  '32': 'toolbarSkinDesignerButton', // 皮膚設計器（開啟線上設計器）
 };
 
 // 獲取按鈕標籤（包含面板和收折）
@@ -81,6 +82,7 @@ local getButtonLabel = function(buttonName)
   else if buttonName == 'toolbarPinyinButton' then '拼'
   else if buttonName == 'toolbarNumericPanelButton' then '九'
   else if buttonName == 'toolbarSymbolPanelButton' then '符'
+  else if buttonName == 'toolbarSkinDesignerButton' then '設'
   else '';
 
 // 獲取按鈕動作（按照新的序號分類）
@@ -774,7 +776,23 @@ local getToolBar(theme, orientation='portrait', keyboardType='keyboard26Chinese'
     fontWeight: 'regular',
   },
 
-  // 32.【測試用】easy_en 獨立英文鍵盤按鈕
+  // 32. 皮膚設計器（開啟線上設計器網址）
+  toolbarSkinDesignerButton: {
+    size: { width: '1/10' },
+    backgroundStyle: 'toolbarButtonBackgroundStyle',
+    foregroundStyle: 'toolbarSkinDesignerButtonForegroundStyle',
+    action: { openURL: 'https://ggininder.work/r/Ryan' },
+  },
+  toolbarSkinDesignerButtonForegroundStyle: {
+    buttonStyleType: 'systemImage',
+    systemImageName: if theme == 'dark' then 'paintpalette.fill' else 'paintpalette',
+    normalColor: color[theme][toolbarButtonColorKey],
+    highlightColor: color[theme][toolbarButtonColorKey],
+    fontSize: fontSize[toolbarButtonSizeKey],
+    fontWeight: 'regular',
+  },
+
+  // 31.【測試用】easy_en 獨立英文鍵盤按鈕
   // 測試目標：combine 同時切換到 easy_en 獨立鍵盤 + 切換 Rime 方案到 easy_en
   toolbarTestButton: {
     size: { width: '1/10' },
