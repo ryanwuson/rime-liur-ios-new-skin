@@ -118,7 +118,7 @@ local createSchemaStyles(theme, key, bounds=null) =
   };
 
 local createHintStyle(key) = {
-  [key + 'ButtonHintStyle']: {
+  [key + 'ButtonHintStyle']: utils.hintBubbleLayout + {
     backgroundStyle: 'alphabeticHintBackgroundStyle',
     foregroundStyle: key + 'ButtonHintForegroundStyle',
     // 滑動氣泡樣式根據獨立的上下滑設定決定是否包含
@@ -201,6 +201,7 @@ local keyboard(theme, orientation) =
       }),
     // 中文鍵盤 Shift 氣泡樣式
     shiftButtonHintStyle: {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'shiftButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'shiftButtonSwipeUpHintForegroundStyle',
@@ -290,6 +291,7 @@ local keyboard(theme, orientation) =
       createButton(theme, { key: 'z', size: ButtonSize['普通键size'] }),
     // 橫屏 z 鍵的 hintStyle（不含上滑）
     zButtonHintStyleLandscape: {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'zButtonHintForegroundStyle',
       // 滑動氣泡樣式總是包含，不受按鈕文字設定影響
@@ -298,6 +300,7 @@ local keyboard(theme, orientation) =
     },
     // 橫屏 z 鍵長按樣式（不含「左手模式」）
     zButtonHintSymbolsStyleLandscape: {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
       selectedBackgroundStyle: 'alphabeticHintSymbolsSelectedStyle',
       selectedIndex: 0,
@@ -310,6 +313,7 @@ local keyboard(theme, orientation) =
       ],
     },
     zButtonHintSymbolsStyleLandscapeOf0: {
+    checkIfOverflowsParentHeight: false,
       action: { sendKeys: '``Z' },
       foregroundStyle: 'zButtonHintSymbolsForegroundStyleLandscapeOf0',
     },
@@ -322,6 +326,7 @@ local keyboard(theme, orientation) =
       center: { x: 0.5, y: 0.48 },
     },
     zButtonHintSymbolsStyleLandscapeOf1: {
+    checkIfOverflowsParentHeight: false,
       action: { shortcut: '#行首' },
       foregroundStyle: 'zButtonHintSymbolsForegroundStyleLandscapeOf1',
     },
@@ -334,6 +339,7 @@ local keyboard(theme, orientation) =
       center: { x: 0.5, y: 0.48 },
     },
     zButtonHintSymbolsStyleLandscapeOf2: {
+    checkIfOverflowsParentHeight: false,
       action: { sendKeys: '``z' },
       foregroundStyle: 'zButtonHintSymbolsForegroundStyleLandscapeOf2',
     },
@@ -481,6 +487,7 @@ local keyboard(theme, orientation) =
       fontSize: fontSize['按键前景文字大小'],
     }),
     commaButtonHintStyle: {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'commaButtonHintForegroundStyle',
       [if swipeStyles.getEffectiveSetting(',', 'enableSwipeUpActions') then 'swipeUpForegroundStyle']: 'commaButtonSwipeUpHintForegroundStyle',
@@ -608,6 +615,7 @@ local keyboard(theme, orientation) =
       fontSize: fontSize['按键前景文字大小'],
     }),
     periodButtonHintStyle: {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'periodButtonHintForegroundStyle',
       [if swipeStyles.getEffectiveSetting('.', 'enableSwipeUpActions') then 'swipeUpForegroundStyle']: 'periodButtonSwipeUpHintForegroundStyle',
@@ -697,6 +705,7 @@ local keyboard(theme, orientation) =
     },
     // d 鍵長按樣式（水平排列尺寸，但選中底色用較小的左邊距）
     dButtonHintSymbolsStyle: {
+    checkIfOverflowsParentHeight: false,
       insets: { top: 3, bottom: 3, left: 8, right: 8 },
       backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
       size: { width: 38, height: 25 },
@@ -719,6 +728,7 @@ local keyboard(theme, orientation) =
     },
     // 逗號長按樣式（覆蓋自動生成的，使用專用背景）
     commaButtonHintSymbolsStyle: {
+    checkIfOverflowsParentHeight: false,
       insets: { top: 3, bottom: 3, left: 8, right: 8 },
       backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
       size: { width: 38, height: 25 },
@@ -734,6 +744,7 @@ local keyboard(theme, orientation) =
     },
     // 句號長按樣式（覆蓋自動生成的，使用專用背景）
     periodButtonHintSymbolsStyle: {
+    checkIfOverflowsParentHeight: false,
       insets: { top: 3, bottom: 3, left: 8, right: 8 },
       backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
       size: { width: 38, height: 25 },
@@ -751,6 +762,7 @@ local keyboard(theme, orientation) =
 
     // 123 鍵長按樣式
     numericButtonHintSymbolsStyle: {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
       selectedBackgroundStyle: 'alphabeticHintSymbolsSelectedStyle',
       selectedIndex: std.get(hintSymbolsData, 'pinyin', {}).comma.selectedIndex,
@@ -767,6 +779,7 @@ local keyboard(theme, orientation) =
     },
     // 空白鍵長按樣式
     spaceButtonHintSymbolsStyle: {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
       selectedBackgroundStyle: 'alphabeticHintSymbolsSelectedStyle',
       selectedIndex: std.get(hintSymbolsData, 'alphabetic', {}).comma.selectedIndex,

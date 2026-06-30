@@ -189,7 +189,7 @@ local keyboard(theme, kbTypePrefix='符號') = {
   },
   enterButtonForegroundStyle: utils.makeTextStyle({
     text: '$returnKeyType',
-    fontSize: fontSize[kbTypePrefix + '鍵盤功能键字体大小'],
+    fontSize: fontSize[kbTypePrefix + '鍵盤enter键字体大小'],
     normalColor: color[theme][kbTypePrefix + '鍵盤enter键文字颜色'],
     highlightColor: color[theme][kbTypePrefix + '鍵盤enter键文字颜色'],
   }),
@@ -212,7 +212,7 @@ local keyboard(theme, kbTypePrefix='符號') = {
   },
   returnKeyTypeForegroundStyle: utils.makeTextStyle({
     text: '$returnKeyType',
-    fontSize: fontSize[kbTypePrefix + '鍵盤功能键字体大小'],
+    fontSize: fontSize[kbTypePrefix + '鍵盤enter键字体大小'],
     normalColor: color[theme][kbTypePrefix + '鍵盤enter键文字颜色'],
     highlightColor: color[theme][kbTypePrefix + '鍵盤enter键文字颜色'],
   }),

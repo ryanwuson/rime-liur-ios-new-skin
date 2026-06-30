@@ -458,6 +458,7 @@ local keyboard(theme) =
   {
     // 批量生成所有 alpha 按鍵的點按氣泡 style（含正確的文字偏移）
     'lbracketRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'lbracketRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'lbracketRowButtonSwipeUpHintForegroundStyle',
@@ -470,6 +471,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'rbracketRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'rbracketRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'rbracketRowButtonSwipeUpHintForegroundStyle',
@@ -482,6 +484,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'lbraceRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'lbraceRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'lbraceRowButtonSwipeUpHintForegroundStyle',
@@ -494,6 +497,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'rbraceRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'rbraceRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'rbraceRowButtonSwipeUpHintForegroundStyle',
@@ -506,6 +510,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'hashRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'hashRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'hashRowButtonSwipeUpHintForegroundStyle',
@@ -518,6 +523,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'percentRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'percentRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'percentRowButtonSwipeUpHintForegroundStyle',
@@ -530,6 +536,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'caretRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'caretRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'caretRowButtonSwipeUpHintForegroundStyle',
@@ -542,6 +549,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'asteriskSRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'asteriskSRowButtonHintForegroundStyle',
     },
@@ -553,6 +561,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'plusSRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'plusSRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'plusSRowButtonSwipeUpHintForegroundStyle',
@@ -565,6 +574,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'equalSRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'equalSRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'equalSRowButtonSwipeUpHintForegroundStyle',
@@ -577,6 +587,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'underscoreRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'underscoreRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'underscoreRowButtonSwipeUpHintForegroundStyle',
@@ -589,6 +600,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'backslashRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'backslashRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'backslashRowButtonSwipeUpHintForegroundStyle',
@@ -601,6 +613,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'pipeRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'pipeRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'pipeRowButtonSwipeUpHintForegroundStyle',
@@ -613,6 +626,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'tildeRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'tildeRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'tildeRowButtonSwipeUpHintForegroundStyle',
@@ -625,6 +639,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'ltRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'ltRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'ltRowButtonSwipeUpHintForegroundStyle',
@@ -637,6 +652,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'gtRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'gtRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'gtRowButtonSwipeUpHintForegroundStyle',
@@ -649,6 +665,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'euroRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'euroRowButtonHintForegroundStyle',
     },
@@ -660,6 +677,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'poundRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'poundRowButtonHintForegroundStyle',
     },
@@ -671,6 +689,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'yenRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'yenRowButtonHintForegroundStyle',
     },
@@ -682,6 +701,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'middleDotRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'middleDotRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'middleDotRowButtonSwipeUpHintForegroundStyle',
@@ -694,6 +714,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'ellipsisRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'ellipsisRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'ellipsisRowButtonSwipeUpHintForegroundStyle',
@@ -706,6 +727,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'commaSRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'commaSRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'commaSRowButtonSwipeUpHintForegroundStyle',
@@ -718,6 +740,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'periodSRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'periodSRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'periodSRowButtonSwipeUpHintForegroundStyle',
@@ -730,6 +753,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'questionSRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'questionSRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'questionSRowButtonSwipeUpHintForegroundStyle',
@@ -742,6 +766,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'exclamSRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'exclamSRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'exclamSRowButtonSwipeUpHintForegroundStyle',
@@ -754,6 +779,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'lsquoteRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'lsquoteRowButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'lsquoteRowButtonSwipeUpHintForegroundStyle',
@@ -766,6 +792,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'rsquoteRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'rsquoteRowButtonHintForegroundStyle',
     },
@@ -777,6 +804,7 @@ local keyboard(theme) =
       normalColor: color[theme]['Row符號键盘按下气泡文字顏色'],
     },
     'dquoteSRowButtonHintStyle': {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'dquoteSRowButtonHintForegroundStyle',
     },

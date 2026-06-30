@@ -57,7 +57,7 @@ local createButton(params={}) =
   });
 
 local createHintStyle(key) = {
-  [key + 'ButtonHintStyle']: {
+  [key + 'ButtonHintStyle']: utils.hintBubbleLayout + {
     backgroundStyle: 'alphabeticHintBackgroundStyle',
     foregroundStyle: key + 'ButtonHintForegroundStyle',
     [if std.objectHas(swipe_up, key) && swipeStyles.getEffectiveSetting(key, 'enableSwipeUpActions') then 'swipeUpForegroundStyle']: key + 'ButtonSwipeUpHintForegroundStyle',
@@ -272,6 +272,7 @@ local keyboard(theme, orientation) =
     },
 
     numericButtonHintSymbolsStyle: {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
       selectedBackgroundStyle: 'alphabeticHintSymbolsSelectedStyle',
       selectedIndex: 0,
@@ -363,6 +364,7 @@ local keyboard(theme, orientation) =
       center: { x: 0.5, y: 0.2 },
     },
     periodButtonHintStyle: {
+    checkIfOverflowsParentHeight: false,
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'periodButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'periodButtonSwipeUpHintForegroundStyle',
@@ -456,6 +458,7 @@ local keyboard(theme, orientation) =
     },
     // d 鍵長按樣式覆蓋（5個選項：計算、d、D、ḋ、Ḋ）
     dButtonHintSymbolsStyle: {
+    checkIfOverflowsParentHeight: false,
       insets: { top: 3, bottom: 3, left: 8, right: 8 },
       backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
       size: { width: 38, height: 25 },

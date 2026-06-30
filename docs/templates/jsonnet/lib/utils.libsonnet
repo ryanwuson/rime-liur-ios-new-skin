@@ -163,6 +163,11 @@ local genNumberStyles(theme) = {
   for num in std.range(0, 9)
 };
 
+// 元書 TF≥397／商店≥1.6.23：關閉氣泡溢出鍵盤高度自動下移（hint.png 上半透明區視覺上不遮擋）
+local hintBubbleLayout = {
+  checkIfOverflowsParentHeight: false,
+};
+
 // 生成按下气泡前景
 local genHintStyles(theme) =
   {
@@ -187,4 +192,6 @@ local genHintStyles(theme) =
   genAlphabeticStyles: genAlphabeticStyles,
   genNumberStyles: genNumberStyles,
   genHintStyles: genHintStyles,
+
+  hintBubbleLayout: hintBubbleLayout,
 }

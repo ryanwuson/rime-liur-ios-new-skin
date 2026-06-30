@@ -54,7 +54,7 @@ local createBpmfForegroundStyle(theme, key) = {
 };
 
 local createBpmfHintStyle(theme, key) = {
-  [key + 'BpmfButtonHintStyle']: {
+  [key + 'BpmfButtonHintStyle']: utils.hintBubbleLayout + {
     backgroundStyle: 'alphabeticHintBackgroundStyle',
     foregroundStyle: key + 'BpmfButtonHintForegroundStyle',
   },

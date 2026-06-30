@@ -44,7 +44,7 @@ local createBpmfButton(theme, key, size, bounds=null) =
 
 // 建立注音按鍵氣泡樣式（嚴格對齊拼音26鍵的 genHintStyles）
 local createBpmfHintStyle(theme, key) = {
-  [key + 'BpmfButtonHintStyle']: {
+  [key + 'BpmfButtonHintStyle']: utils.hintBubbleLayout + {
     backgroundStyle: 'alphabeticHintBackgroundStyle',
     foregroundStyle: key + 'BpmfButtonHintForegroundStyle',
   },

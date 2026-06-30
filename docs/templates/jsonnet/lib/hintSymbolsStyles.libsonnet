@@ -26,6 +26,7 @@ local systemImageStyle(systemImageName, fs, theme) = {
 // 长按符号样式生成
 local holdSymbolsStyle(key, selectedIndex, size, symbol_list, theme) = {
   [key + 'ButtonHintSymbolsStyle']: {
+    checkIfOverflowsParentHeight: false,
     insets: { top: 3, bottom: 3, left: 8, right: 8 },
     backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
     // 參考指尖生花：使用固定的 size，加寬避免切到字
