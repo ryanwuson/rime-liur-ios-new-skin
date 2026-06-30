@@ -556,15 +556,26 @@
       },
       plugins: [
         function (hook, vm) {
-          hook.doneEach(function () {
-            const id = vm.route.query.id;
-            if (!id) return;
-            requestAnimationFrame(function () {
+          function scrollToAnchor(rawId) {
+            if (!rawId) return;
+            const id = decodeURIComponent(rawId);
+            let tries = 0;
+            function attempt() {
               const el = document.getElementById(id);
               if (el) {
                 el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                return;
               }
-            });
+              if (++tries < 12) setTimeout(attempt, 100);
+            }
+            attempt();
+          }
+          hook.doneEach(function () {
+            scrollToAnchor(vm.route.query.id);
+          });
+          hook.afterEach(function (html, next) {
+            next(html);
+            scrollToAnchor(vm.route.query.id);
           });
         },
       ],
