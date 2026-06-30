@@ -129,7 +129,9 @@
 
 這些設定會套用到**全部鍵盤**，不需要另外勾選。
 
-<img src="./screenshots/12-swipe-config.png" alt="滑動與長按：總開關與分行設定" class="wide-img" />
+<img src="./screenshots/12-swipe-global.png" alt="滑動與長按：全域開關" class="wide-img" />
+
+<img src="./screenshots/12-swipe-per-row.png" alt="滑動與長按：分行細部控制（開啟開關後）" class="wide-img" />
 
 <h3 id="外觀配色">4. 外觀配色</h3>
 
@@ -244,6 +246,7 @@
 ### (3) 元書 App 裡的實際操作
 
 「運行 main.jsonnet」要在**手機上的元書輸入法 App**裡操作（長按皮膚後從選單點選）。  
+建議再補一張**手機實際畫面**截圖，讀者會更清楚。
 
 ---
 
@@ -269,6 +272,9 @@ A：請確認已在元書裡執行「運行 main.jsonnet」。
 
 **Q：內嵌模式要開還是關？**  
 A：請與元書輸入法 App「內嵌輸入模式」設定保持一致。
+
+**Q：第一排按鍵的氣泡位置偏低？**  
+A：元書 TF≥397／商店≥1.6.23 起，請用**本設計器最新版匯出**的皮膚（模板已設 `checkIfOverflowsParentHeight: false`）。若仍用舊版 cskin，請更新後重新匯出並執行「運行 main.jsonnet」。
 
 ---
 
