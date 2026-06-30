@@ -1,4 +1,4 @@
-- [蝦米皮膚設計器 — 使用說明](user-guide.md)
+- [蝦米皮膚設計器 — 使用說明](user-guide.md#使用說明)
 - [建議操作流程](user-guide.md#建議操作流程)
   - [調整顏色時，建議這樣做](user-guide.md#調整顏色時建議這樣做)
 - [套用範圍](user-guide.md#套用範圍)
