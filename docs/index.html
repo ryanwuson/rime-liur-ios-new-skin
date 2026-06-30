@@ -548,12 +548,26 @@
       loadSidebar: true,
       relativePath: true,
       subMaxLevel: 0,
-      auto2top: true,
+      auto2top: false,
       search: {
         placeholder: '搜尋',
         noData: '找不到結果',
         paths: 'auto'
-      }
+      },
+      plugins: [
+        function (hook, vm) {
+          hook.doneEach(function () {
+            const id = vm.route.query.id;
+            if (!id) return;
+            requestAnimationFrame(function () {
+              const el = document.getElementById(id);
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            });
+          });
+        },
+      ],
     }
   </script>
   <!-- Docsify v4 -->
