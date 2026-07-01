@@ -14,6 +14,7 @@
   - [5. 字體大小](user-guide.md#字體大小)
 - [匯入與導出](user-guide.md#匯入與導出)
   - [導出](user-guide.md#導出)
+  - [建議保留 .cskin 檔](user-guide.md#建議保留-cskin-檔)
   - [匯入配色主題](user-guide.md#匯入配色主題)
 - [常見問題](user-guide.md#常見問題)
 - [新版更新了什麼？](user-guide.md#新版更新了什麼)
