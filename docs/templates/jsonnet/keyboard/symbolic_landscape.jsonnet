@@ -134,7 +134,7 @@ local keyboard(theme, kbTypePrefix='符號') = {
   // 鍵盤佈局
   keyboardLayout: [
     { HStack: { style: 'HStackStyle1', subviews: [{ Cell: 'categoryCollection' }, { Cell: 'descriptionCollection' }] } },
-    { HStack: { style: 'HStackStyle2', subviews: [{ Cell: 'returnButton' }, { Cell: 'pageUpButton' }, { Cell: 'pageDownButton' }, { Cell: 'lockButton' }, { Cell: 'backspaceButton' }] } },
+    { HStack: { style: 'HStackStyle2', subviews: [{ Cell: 'returnButton' }, { Cell: 'spaceButton' }, { Cell: 'lockButton' }, { Cell: 'backspaceButton' }, { Cell: 'enterButton' }] } },
   ],
 
   // 鍵盤樣式 - 頂部間距 3px，讓分類+內容區域與頂部和底部按鈕行的間距相等
@@ -162,36 +162,59 @@ local keyboard(theme, kbTypePrefix='符號') = {
     center: { y: 0.53 },
   }),
 
-  // 下一頁按鈕 - 寬度為符號內容區域的 1/4 (77/366)
-  pageDownButton: {
-    action: { shortcut: '#subCollectionPageDown' },
+  // 空格按鈕 - 寬度為符號內容區域的 1/4 (77/366)
+  spaceButton: {
+    action: 'space',
     animation: ['ButtonScaleAnimation'],
     backgroundStyle: 'systemButtonBackgroundStyle',
-    foregroundStyle: 'pageDownButtonForegroundStyle',
+    foregroundStyle: 'spaceButtonForegroundStyle',
     size: { width: '77/366' },
   },
-  pageDownButtonForegroundStyle: utils.makeSystemImageStyle({
-    systemImageName: 'chevron.down',
-    fontSize: fontSize[kbTypePrefix + '鍵盤功能键字体大小'],  // 使用 systemSize
+  spaceButtonForegroundStyle: utils.makeTextStyle({
+    text: '空格',
+    fontSize: fontSize[kbTypePrefix + '鍵盤功能键字体大小'],
     normalColor: color[theme][kbTypePrefix + '鍵盤功能键文字颜色'],
     highlightColor: color[theme][kbTypePrefix + '鍵盤功能键文字颜色'],
-    center: { y: 0.53 },
   }),
 
-  // 上一頁按鈕 - 寬度為符號內容區域的 1/4 (77/366)
-  pageUpButton: {
-    action: { shortcut: '#subCollectionPageUp' },
+  // Enter 按鈕 - 寬度與分類欄一致 (29/183)
+  enterButton: {
+    action: 'enter',
     animation: ['ButtonScaleAnimation'],
-    backgroundStyle: 'systemButtonBackgroundStyle',
-    foregroundStyle: 'pageUpButtonForegroundStyle',
-    size: { width: '77/366' },
+    backgroundStyle: 'enterButtonBackgroundStyle',
+    foregroundStyle: 'enterButtonForegroundStyle',
+    size: { width: '29/183' },
+    notification: ['returnKeyTypeChangedNotification'],
+    swipeDownAction: { shortcut: '#换行' },
   },
-  pageUpButtonForegroundStyle: utils.makeSystemImageStyle({
-    systemImageName: 'chevron.up',
-    fontSize: fontSize[kbTypePrefix + '鍵盤功能键字体大小'],  // 使用 systemSize
-    normalColor: color[theme][kbTypePrefix + '鍵盤功能键文字颜色'],
-    highlightColor: color[theme][kbTypePrefix + '鍵盤功能键文字颜色'],
-    center: { y: 0.53 },
+  enterButtonForegroundStyle: utils.makeTextStyle({
+    text: '$returnKeyType',
+    fontSize: fontSize[kbTypePrefix + '鍵盤enter键字体大小'],
+    normalColor: color[theme][kbTypePrefix + '鍵盤enter键文字颜色'],
+    highlightColor: color[theme][kbTypePrefix + '鍵盤enter键文字颜色'],
+  }),
+  enterButtonBackgroundStyle: utils.makeGeometryStyle({
+    cornerRadius: 7,
+    insets: { bottom: 2, left: 2, right: 2, top: 2 },
+    normalColor: color[theme][kbTypePrefix + '鍵盤enter键背景颜色-普通'],
+    highlightColor: color[theme][kbTypePrefix + '鍵盤enter键背景颜色-高亮'],
+    normalLowerEdgeColor: color[theme][kbTypePrefix + '鍵盤enter键底边缘颜色-普通'],
+    highlightLowerEdgeColor: color[theme][kbTypePrefix + '鍵盤enter键底边缘颜色-高亮'],
+    borderSize: color[theme][kbTypePrefix + '鍵盤enter键边框宽度'],
+    normalBorderColor: color[theme][kbTypePrefix + '鍵盤enter键边框颜色-普通'],
+    highlightBorderColor: color[theme][kbTypePrefix + '鍵盤enter键边框颜色-高亮'],
+  }),
+  returnKeyTypeChangedNotification: {
+    notificationType: 'returnKeyType',
+    returnKeyType: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    backgroundStyle: 'enterButtonBackgroundStyle',
+    foregroundStyle: 'returnKeyTypeForegroundStyle',
+  },
+  returnKeyTypeForegroundStyle: utils.makeTextStyle({
+    text: '$returnKeyType',
+    fontSize: fontSize[kbTypePrefix + '鍵盤enter键字体大小'],
+    normalColor: color[theme][kbTypePrefix + '鍵盤enter键文字颜色'],
+    highlightColor: color[theme][kbTypePrefix + '鍵盤enter键文字颜色'],
   }),
 
   // 返回按鈕 - 寬度與分類欄一致 (29/183)
