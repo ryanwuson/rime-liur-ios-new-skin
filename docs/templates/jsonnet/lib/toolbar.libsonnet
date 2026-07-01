@@ -46,8 +46,7 @@ local buttonMap = {
   '28': 'toolbarPinyinButton',       // 拼音鍵盤
   '29': 'toolbarNumericPanelButton', // 九宮格數字鍵盤（固定）
   '30': 'toolbarSymbolPanelButton',  // 符號面板（固定）
-  '31': 'toolbarTestButton',         // 【測試用】easy_en 獨立英文鍵盤
-  '32': 'toolbarSkinDesignerButton', // 皮膚設計器（開啟線上設計器）
+  '31': 'toolbarSkinDesignerButton', // 皮膚設計器（開啟線上設計器）
 };
 
 // 獲取按鈕標籤（包含面板和收折）
@@ -776,7 +775,7 @@ local getToolBar(theme, orientation='portrait', keyboardType='keyboard26Chinese'
     fontWeight: 'regular',
   },
 
-  // 32. 皮膚設計器（開啟線上設計器網址）
+  // 31. 皮膚設計器（開啟線上設計器網址）
   toolbarSkinDesignerButton: {
     size: { width: '1/10' },
     backgroundStyle: 'toolbarButtonBackgroundStyle',
@@ -790,28 +789,6 @@ local getToolBar(theme, orientation='portrait', keyboardType='keyboard26Chinese'
     highlightColor: color[theme][toolbarButtonColorKey],
     fontSize: fontSize[toolbarButtonSizeKey],
     fontWeight: 'regular',
-  },
-
-  // 31.【測試用】easy_en 獨立英文鍵盤按鈕
-  // 測試目標：combine 同時切換到 easy_en 獨立鍵盤 + 切換 Rime 方案到 easy_en
-  toolbarTestButton: {
-    size: { width: '1/10' },
-    backgroundStyle: 'toolbarButtonBackgroundStyle',
-    foregroundStyle: 'toolbarTestButtonForegroundStyle',
-    action: {
-      combine: [
-        { keyboardType: 'easy_en' },
-        { switchRimeSchema: 'easy_en' },
-      ],
-    },
-  },
-  toolbarTestButtonForegroundStyle: {
-    buttonStyleType: 'text',
-    text: '測',
-    normalColor: color[theme][toolbarButtonColorKey],
-    highlightColor: color[theme][toolbarButtonColorKey],
-    fontSize: fontSize[toolbarButtonSizeKey],
-    fontWeight: 'light',
   },
 
   // 動態生成空白佔位按鈕（最多支援10個）
