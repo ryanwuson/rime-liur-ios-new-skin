@@ -283,6 +283,12 @@
       vertical-align: middle;
     }
 
+    /* 工具列／UI 圖示為黑色 SVG，暗黑模式下反相為淺色 */
+    html[data-theme="dark"] .markdown-section img.toolbar-icon,
+    html[data-theme="dark"] .markdown-section img.ui-icon {
+      filter: invert(1) brightness(1.15);
+    }
+
     /* 工具配置表格：固定欄寬比例（圖示窄） */
     .markdown-section table.equal-cols {
       display: table !important;
