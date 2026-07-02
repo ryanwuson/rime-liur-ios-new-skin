@@ -13,7 +13,7 @@
 | 選項 | 說明 |
 |------|------|
 | **「Shift」鍵**（預設） | 上滑 Shift 切換英文 |
-| **「英」鍵** | 點按工具列「英」切換英文（需在 [工具配置](toolbar-config.md) 放入「中英切換」） |
+| **「英」鍵** | 點按工具列「英」切換英文（需在 [工具配置](settings/toolbar-config.md) 放入「中英切換」） |
 
 ---
 
@@ -62,7 +62,7 @@
 
 | 選項 | 說明 | 手勢／工具 |
 |------|------|------------|
-| **橫列數字 + 橫列符號**（預設） | 數字、符號皆橫排 | 可選 [獨立九宮格數字](toolbar-config.md)、[獨立符號面板](toolbar-config.md) |
+| **橫列數字 + 橫列符號**（預設） | 數字、符號皆橫排 | 可選 [獨立九宮格數字](settings/toolbar-config.md)、[獨立符號面板](settings/toolbar-config.md) |
 | **九宮格數字 + 面板符號** | 九宮格數字、分類符號面板 | 123 下滑 → 九宮格；與橫列佈局工具 29／30 互斥 |
 
 詳見 [使用指南·鍵盤佈局](https://ryanwuson.github.io/rime-liur-ios/#/daily-use/keyboard-layout)。

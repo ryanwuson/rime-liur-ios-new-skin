@@ -11,4 +11,4 @@
 | <img src="../images/ui/export-cskin.svg" class="ui-icon" alt=""> | **導出配置** | 下載 `.cskin` 皮膚檔 |
 | <img src="../images/ui/book.svg" class="ui-icon" alt=""> | **使用說明** | 查看如何在元書輸入法 App 裡讓皮膚生效 |
 
-匯入／導出詳見 [匯入與導出](../import-export.md)。
+匯入／導出詳見 [匯入與導出](import-export.md)。
